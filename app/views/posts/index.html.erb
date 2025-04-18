@@ -5,7 +5,10 @@
 
 <ul>
     <% @posts.each do |post| %>
-        <li><%= post.content %></li>
+        <li>
+            <%= post.content %>
+            <%= button_to '削除', post_path(post), method: :delete, data: { confirm: '本当に削除しますか？' } %>
+        </li>
     <% end %>
 </ul>
 
