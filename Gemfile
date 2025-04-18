@@ -63,4 +63,4 @@ group :test do
 end
 
 # Gemfile
-gem 'importmap-rails'
+gem "importmap-rails"
