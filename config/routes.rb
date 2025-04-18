@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  # root "home#index"
+  root "posts#index"
+  resources :posts, only: [ :index, :new, :create ]
+
   get "posts/index"
   get "posts/new"
   get "posts/create"
-  root "home#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
