@@ -10,7 +10,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to root_path, notice: "投稿完了！"
+      # 新規投稿後に投稿一覧ページへリダイレクト
+      redirect_to posts_path, notice: "投稿完了！"
     else
       render :new
     end
